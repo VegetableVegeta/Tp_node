@@ -1,5 +1,14 @@
 const router = require('express').Router();
+const {
+  homeCtrl,
+  servicesCtrl,
+  contactCtrl,
+} = require('../controllers/app.ctrl');
 
-router.get('*', (req, res) => res.end());
+router.get('/home', homeCtrl);
+router.get('/services', servicesCtrl);
+router.get('/contact', contactCtrl);
+
+router.get('*', (req, res) => res.redirect('/home'));
 
 module.exports = router;
