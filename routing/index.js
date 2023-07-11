@@ -1,13 +1,9 @@
 const router = require('express').Router();
-const {
-  homeCtrl,
-  servicesCtrl,
-  contactCtrl,
-} = require('../controllers/app.ctrl');
+const appRoutes = require('./app.routes');
+const apiRoutes = require('./api.routes');
 
-router.get('/home', homeCtrl);
-router.get('/services', servicesCtrl);
-router.get('/contact', contactCtrl);
+router.use( appRoutes );
+router.use( apiRoutes );
 
 router.get('*', (req, res) => res.redirect('/home'));
 
