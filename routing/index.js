@@ -3,7 +3,7 @@ const appRoutes = require('./app.routes');
 const apiRoutes = require('./api.routes');
 
 router.use( appRoutes );
-router.use( apiRoutes );
+router.use( '/api', apiRoutes );
 
 router.get('*', (req, res) => res.redirect('/home'));
 

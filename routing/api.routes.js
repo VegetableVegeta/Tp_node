@@ -5,8 +5,8 @@ const {
   editTodo
 } = require('../controllers/api.ctrl');
 
-router.get('/api/todos', getTodos);
-router.post('/api/todos', createTodo);
-router.put('/api/todos/:id', editTodo);
+router.get('/todos', getTodos);
+router.post('/todos', createTodo);
+router.put('/todos/:id', editTodo);
 
 module.exports = router;
