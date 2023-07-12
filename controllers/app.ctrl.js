@@ -1,7 +1,13 @@
 const { resolve } = require('path');
+// app.engine('pug', require('pug').__express);
 
 exports.homeCtrl = (req, res) => {
-  res.sendFile( resolve('public', 'home.html') );
+  res.render('home.pug');
+};
+
+exports.todosCtrl = (req, res) => {
+  const { todos } = require('../database/data.json');
+  res.render('todolist.pug', { todos });
 };
 
 exports.servicesCtrl = (req, res) => {

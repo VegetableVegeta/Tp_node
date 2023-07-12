@@ -1,0 +1,25 @@
+{
+    "todos": [
+      {
+        "id": "7ab3b1d3-a3e0-48db-9690-319d2735cd50",
+        "txt": "Faire la cuisine",
+        "cat": "urgent",
+        "done": false,
+        "userID": "9df455e5-a4db-4cc5-896e-8134016de60e"
+      },
+      {
+        "id": "4ac8a160-2a3c-487e-8555-cfe8416db52c",
+        "txt": "Faire le ménage",
+        "cat": "priori",
+        "done": true,
+        "userID": "3edf5dcc-0eb6-4654-ab68-b411accfee1f"
+      },
+      {
+        "id": "93237a86-f6c4-4bdf-87e9-33344d2067a1",
+        "txt": "Faire la lessive",
+        "cat": "urgent",
+        "done": false,
+        "userID": "9df455e5-a4db-4cc5-896e-8134016de60e"
+      }
+    ]
+  }

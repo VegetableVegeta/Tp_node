@@ -1,4 +1,171 @@
+/* Global styles */
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   background: red;
   color: white;
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav label {
+  display: none; /* Hide the checkbox label by default */
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-left: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  nav label {
+    display: block; /* Show the checkbox label */
+  }
+
+  nav ul {
+    display: none; /* Hide the navigation links */
+    flex-direction: column;
+    background-color: #f8f8f8;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  nav input:checked ~ ul {
+    display: flex; /* Show the navigation links when checkbox is checked */
+  }
+}
+
+.list-wrapper {
+  overflow-x: auto;
+}
+
+.list-group {
+  white-space: nowrap;
+}
+
+.list-group-item {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #f8f8f8;
+  color: black; /* Set the text color to black */
+}
+
+/* Page header */
+h1 {
+  margin: 20px 0;
+}
+
+/* User selection */
+.user-selection {
+  margin-bottom: 20px;
+}
+
+/* Task creation */
+.task-creation {
+  margin-bottom: 20px;
+}
+
+.task-creation h2 {
+  margin-bottom: 10px;
+}
+
+.task-creation form {
+  display: flex;
+}
+
+.task-creation input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.task-creation select {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+/* Task filters */
+.task-filters {
+  margin-bottom: 20px;
+}
+
+/* Task lists */
+.tasks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center; /* Add this line to center the task lists */
+}
+
+.tasks h2 {
+  flex-basis: 100%;
+  text-align: center; /* Add this line to center the heading */
+}
+
+.tasks-todo,
+.tasks-done {
+  flex: 1 1 50%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Add this line to center the task items vertically */
+  align-items: center; /* Add this line to center the task items horizontally */
+}
+
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Add this line to remove the default margin */
+}
+
+.list-group li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center; /* Add this line to center the task item content */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .tasks-todo,
+  .tasks-done {
+    flex-basis: 100%;
+  }
 }

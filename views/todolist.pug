@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Liste de tâches
+    link(href="/css/style.css" rel="stylesheet")
+    script(src="/js/my-script.js" type="module")
+body
+  include includes/nav
+  h1 Liste de tâches
+  div.container
+    div.list-wrapper
+      ul.list-group
+        each todo in todos
+          li.list-group-item
+            span= todo.txt
