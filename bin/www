@@ -1,9 +1,7 @@
 const http = require("http");
 const https = require("https");
-const {
-  ports,
-  ssl: { cert, key },
-} = require(`../env/env.${process.env.NODE_ENV}`);
+const { ports, ssl: { cert, key } } = require('../env/env.development');
+
 const app = require("../app");
 
 http
